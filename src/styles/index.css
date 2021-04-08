@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 min-h-screen block bg-gray-900 text-gray-200;
+}
+
+.__custom_layout {
+  grid-template-rows: 75px auto;
+  grid-template-columns: 75px auto;
+  grid-template-areas:
+    'sidebar navbar'
+    'sidebar main';
+}
+
+.__custom_layout .__custom_main {
+  grid-area: main;
+}
+
+.__custom_layout .__custom_navbar {
+  grid-area: navbar;
+}
+
+.__custom_layout .__custom_sidebar {
+  grid-area: sidebar;
+}
